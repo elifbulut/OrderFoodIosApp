@@ -1,7 +1,8 @@
 
- <h1 align="center"> FOODIE IOS APP<img height="40" </h1>
+ <h1 align="left"> FOODIE IOS APP<img height="40" </h1>
  
- <h3 align="center">TechMaster Ios Bootcamp Graduation Project</h3>
+ <h3 align="left">TechMaster Ios Bootcamp Graduation Project</h3>
+ 
  
 - Can register in the system - **Firebase**
 
@@ -18,5 +19,44 @@
 - Added products can be removed from the cart.
 
 - Products can be ordered.
+
+<div id="header" align="left">
+  <img src="https://www.linkpicture.com/q/1_606.png" width="270"/>
+  <img src="https://www.linkpicture.com/q/2_379.png" width="270"/>
+  <img src="https://www.linkpicture.com/q/3_451.png" width="270"/>
+  <img src="https://www.linkpicture.com/q/4_185.png" width="270"/>
+  <img src="https://www.linkpicture.com/q/5_161.png" width="270"/>
+  <img src="https://www.linkpicture.com/q/6_142.png" width="270"/>
+  <img src="https://www.linkpicture.com/q/7_96.png" width="270"/>
+  <img src="https://www.linkpicture.com/q/8_78.png" width="270"/>
+  <img src="https://www.linkpicture.com/q/9_73.png" width="270"/>
+  <img src="https://www.linkpicture.com/q/10_66.png" width="270"/>
+  <img src="https://www.linkpicture.com/q/11_71.png" width="270"/>
+</div>
+<h3 align="left">Tools</h3>
+
+<h4 align="left">Architectural Design</h4>
+
+* Clean Code
+* VIPER Pattern
+
+<h4 align="left">UKIT</h4>
+
+* CollectionView & Tableview
+* SearchBar
+* Alert
+* Tabbar
+* LaunchScreen
+
+<h4 align="left">Database</h4>
+
+* API 
+* Firebase
+
+<h4 align="left">Packages</h4>
+
+*  Alomafire
+*  Firebase
+*  Kingfisher
 
 
