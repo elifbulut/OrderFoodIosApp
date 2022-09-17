@@ -26,12 +26,14 @@ class OnboardingViewController: UIViewController {
 }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    
         //Slides 
         UIBarButtonItem.appearance().tintColor = UIColor(red: 213/255.0, green: 254/255.0, blue: 80/255.0, alpha: 1.0)
         slides = [
-                    onboardingSlide(title: "The Most Delicious Foods", description: "The chance to experience the most delicious food in the world.", image: #imageLiteral(resourceName: "delivery")),
-                    onboardingSlide(title: "Fast Delivery", description: "Your orders will be delivered instantly irrespective of your location around the world.", image: #imageLiteral(resourceName: "delivery1")),
-                    onboardingSlide(title: "You Can Order 24/7", description: "You can order from the phone whenever you want, regardless of the time.", image: #imageLiteral(resourceName: "delivery2"))
+                    onboardingSlide(title: "The Most Delicious Foods", description: "The chance to experience the most delicious food in the world.", image: #imageLiteral(resourceName: "foodie")),
+                    onboardingSlide(title: "Fast Delivery", description: "Your orders will be delivered instantly irrespective of your location around the world.", image: #imageLiteral(resourceName: "delivery-man")),
+                    onboardingSlide(title: "You Can Order 24/7", description: "You can order from the phone whenever you want, regardless of the time.", image: #imageLiteral(resourceName: "online"))
                 ]
         onboardingPageControl.numberOfPages = slides.count
     }

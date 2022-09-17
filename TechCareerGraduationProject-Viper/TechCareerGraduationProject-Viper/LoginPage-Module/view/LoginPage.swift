@@ -16,6 +16,7 @@ class LoginPage: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         LoginPageRouter.createModule(ref: self)
+        
     }
     @IBAction func signUpButton(_ sender: Any) {
         performSegue(withIdentifier: "toRegister", sender: nil)

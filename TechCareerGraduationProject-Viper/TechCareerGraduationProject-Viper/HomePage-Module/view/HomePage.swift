@@ -16,6 +16,7 @@ class HomePage: UIViewController {
     @IBOutlet weak var foodCollectionView: UICollectionView!
     //object
     var homePagePresenterObject : ViewToPresenterHomePageProtocol?
+    
     var foodList = [Foods]()
     var filterFood = [Foods]()
     
@@ -27,6 +28,12 @@ class HomePage: UIViewController {
         searchBar.delegate = self
         HomePageRouter.createModule(ref: self)
         
+        //search bar design
+        self.searchBar.isTranslucent = true
+        searchBar.barTintColor = UIColor.clear
+        searchBar.backgroundColor = UIColor.clear
+        self.tabBarController?.navigationItem.titleView = searchBar
+
         //collectionView Design
         let collectionViewDesign = UICollectionViewFlowLayout()
         collectionViewDesign.minimumLineSpacing = 10
@@ -49,7 +56,7 @@ class HomePage: UIViewController {
         }
     }
 }
-extension HomePage: UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension HomePage: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return filterFood.count
     }
@@ -63,7 +70,6 @@ extension HomePage: UICollectionViewDelegate,UICollectionViewDataSource, UIColle
         cell.layer.shadowColor = CGColor(colorSpace: rgb, components: black)
         cell.layer.shadowOpacity = 0.08;
         cell.layer.shadowRadius = 10;
-        //cell.layer.shadowOffset = CGSizeMake(-2, 7)
         cell.foodName.text = food.yemek_adi!
         cell.foodPrice.text = "\(food.yemek_fiyat!).00 ₺"
 

@@ -23,12 +23,6 @@ class Register: UIViewController {
            let passwordText = passwordTextField.text {
                 registerPresenterObject?.registerAll(email: emailText, password: passwordText)
             }
-        let alert = UIAlertController(title: "WELCOME TO THE TEAM", message: "", preferredStyle: .alert)
-                let okayAction = UIAlertAction(title: "Okay", style: .default) { action in
-                    self.performSegue(withIdentifier: "HomePage2", sender: nil)
-                }
-                alert.addAction(okayAction)
-                self.present(alert, animated: true)
         }
     }
 

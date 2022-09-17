@@ -65,7 +65,7 @@ extension Cart : UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CardCell", for: indexPath) as! CardCell
         cell.foodNameL.text = cartFood.yemek_adi!
         cell.foodPrice.text = "\(Int(cartFood.yemek_fiyat!)!).00 ₺"
-        cell.foodCount.text = "\(cartFood.yemek_siparis_adet!) count"
+        cell.foodCount.text = "\(cartFood.yemek_siparis_adet!) pc"
         if let url = URL(string: "http://kasimadalan.pe.hu/yemekler/resimler/\(cartFood.yemek_resim_adi!)") {
             DispatchQueue.main.async {
                 cell.foodImageV.kf.setImage(with: url)

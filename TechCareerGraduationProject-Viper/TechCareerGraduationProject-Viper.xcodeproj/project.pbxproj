@@ -307,12 +307,12 @@
 			path = protocols;
 			sourceTree = "<group>";
 		};
-		C7B284C528D0A7700084CD84 /* CollectionView */ = {
+		C7B284C528D0A7700084CD84 /* CollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
 				C7B284C628D0A78F0084CD84 /* FoodCell.swift */,
 			);
-			path = CollectionView;
+			path = CollectionViewCell;
 			sourceTree = "<group>";
 		};
 		C7B284D228D0B5430084CD84 /* FoodDetail-Module */ = {
@@ -450,7 +450,7 @@
 		C7FBBC7D28CFE069002337FE /* HomePage-Module */ = {
 			isa = PBXGroup;
 			children = (
-				C7B284C528D0A7700084CD84 /* CollectionView */,
+				C7B284C528D0A7700084CD84 /* CollectionViewCell */,
 				C7FBBC8228CFE0A9002337FE /* protocols */,
 				C7FBBC8128CFE0A2002337FE /* router */,
 				C7FBBC8028CFE09B002337FE /* interactor */,
