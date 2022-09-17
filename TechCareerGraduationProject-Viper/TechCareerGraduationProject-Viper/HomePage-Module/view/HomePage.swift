@@ -104,8 +104,6 @@ extension HomePage: UISearchBarDelegate {
 }
 extension HomePage : PresenterToViewHomePageProtocol {
     func sendDataToView(foodsAtCart: Int) {
-            //self.tabBarController?.tabBar.items![2].badgeValue = "\(foodsAtCart)"
-            //self.tabBarController?.tabBar.items![2].badgeColor = UIColor(named: "SecondyColor")
         }
         func sendDataToView(foods: Array<Foods>) {
             self.foodList = foods
