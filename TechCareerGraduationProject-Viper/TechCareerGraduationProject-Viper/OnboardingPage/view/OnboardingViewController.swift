@@ -27,7 +27,6 @@ class OnboardingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    
         //Slides 
         UIBarButtonItem.appearance().tintColor = UIColor(red: 213/255.0, green: 254/255.0, blue: 80/255.0, alpha: 1.0)
         slides = [

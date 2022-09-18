@@ -16,7 +16,6 @@ class HomePage: UIViewController {
     @IBOutlet weak var foodCollectionView: UICollectionView!
     //object
     var homePagePresenterObject : ViewToPresenterHomePageProtocol?
-    
     var foodList = [Foods]()
     var filterFood = [Foods]()
     
@@ -27,13 +26,11 @@ class HomePage: UIViewController {
         foodCollectionView.dataSource = self
         searchBar.delegate = self
         HomePageRouter.createModule(ref: self)
-        
         //search bar design
         self.searchBar.isTranslucent = true
         searchBar.barTintColor = UIColor.clear
         searchBar.backgroundColor = UIColor.clear
         self.tabBarController?.navigationItem.titleView = searchBar
-
         //collectionView Design
         let collectionViewDesign = UICollectionViewFlowLayout()
         collectionViewDesign.minimumLineSpacing = 10
@@ -62,7 +59,6 @@ extension HomePage: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         let food = filterFood[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FoodCell", for: indexPath) as! FoodCell
         let rgb: CGColorSpace = CGColorSpaceCreateDeviceRGB()
@@ -81,12 +77,10 @@ extension HomePage: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
                 }
         return cell
     }
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let food = filterFood[indexPath.row]
         performSegue(withIdentifier: "FoodDetail", sender: food)
     }
-    
 }
 extension HomePage: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {

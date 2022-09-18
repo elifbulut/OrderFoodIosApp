@@ -8,7 +8,6 @@
 import UIKit
 import Firebase
 import Kingfisher
-
 class FoodDetailVC: UIViewController {
 
     @IBOutlet weak var foodName: UILabel!
@@ -17,7 +16,6 @@ class FoodDetailVC: UIViewController {
     @IBOutlet weak var totalPrice: UILabel!
     
     var foodDetailPresenterObject : ViewToPresenterFoodDetailProtocol?
-    
     var count : Int = 1
     var food : Foods?
     
@@ -59,11 +57,9 @@ class FoodDetailVC: UIViewController {
     @IBAction func minusButton(_ sender: Any) {
         takeFoodOutFromCart()
     }
-    
     @IBAction func plusButton(_ sender: Any) {
         addFoodToCart()
     }
-    
     @IBAction func addToCartButton(_ sender: Any) {
         if let f = food{
             foodDetailPresenterObject?.addAllFoodToCart(yemek_adi: f.yemek_adi!, yemek_fiyat: f.yemek_fiyat!, yemek_resim_adi: f.yemek_resim_adi!, yemek_siparis_adet: String(count), kullanici_adi: "\(Auth.auth().currentUser?.email ?? "")")

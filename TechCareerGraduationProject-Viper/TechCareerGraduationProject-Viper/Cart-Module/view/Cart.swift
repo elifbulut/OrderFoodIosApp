@@ -52,7 +52,6 @@ extension Cart : PresenterToViewCartProtocol {
         self.foodsCount = foodCount
         DispatchQueue.main.async {
             self.cardTableView.reloadData()
-            //print(self.foodsCount)
         }
     }
 }
@@ -74,7 +73,6 @@ extension Cart : UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        
         let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (contextualAction,view,bool) in
                 let cart = self.cartFoods[indexPath.row]
                 self.cartFoods.remove(at: indexPath.row)

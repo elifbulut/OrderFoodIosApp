@@ -16,7 +16,6 @@ class LoginPage: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         LoginPageRouter.createModule(ref: self)
-        
     }
     @IBAction func signUpButton(_ sender: Any) {
         performSegue(withIdentifier: "toRegister", sender: nil)
@@ -33,7 +32,7 @@ class LoginPage: UIViewController {
                         print("Login Success: " + (user?.email)! )
                         self.performSegue(withIdentifier: "HomePage", sender: nil)
                     } else {
-                        //uyelik girisi olmuyorsa hata ver
+                        //Logın error
                         let alert = UIAlertController(title: "Error", message: "Please enter the information correctly. If you think there is an error, please contact us", preferredStyle: .alert)
                         let OKAction = UIAlertAction(title: "Okay", style: .default){ action in
                             self.navigationController?.popToRootViewController(animated: true)}
